@@ -1,48 +1,28 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import { Link } from "gatsby"
+import "../styles.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <div>
+        <nav className="navBar">
+          <Link className="navItem" to="/">Home</Link>
+          <Link className="navItem" to="/nieuws">Nieuws</Link>
+          <Link className="navItem" to="/wie-is-wie">Wie is wie</Link>
+          <Link className="navItem" to="/themas">Themas</Link>
+          <Link className="navItem" to="/contact">Contact</Link>
+        </nav>
+        <main className="content">
+          {children}
+          </main>
+        <footer className="footer">
+          <div className="content">
+            © {new Date().getFullYear()} &middot; Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </div>
         </footer>
       </div>
     </>
