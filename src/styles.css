@@ -22,6 +22,36 @@
     color: var(--secundary);
     text-align: center;
   }
+
+    h2, .h2 {
+        color: var(--secundary);
+        text-align: center;
+    }
+
+    h3, .h3 {
+        color: var(--secundary);
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+  .button {
+    display: block;
+    padding: 1rem;
+    background-color: var(--accentTwo);
+    color: var(--light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    width: 10rem;
+    margin: 2rem auto;
+  }
+
+    .button:hover {
+        background-color: var(--secundary);
+        cursor: pointer;
+    }
  
   .navBar {
     display: flex;
@@ -46,6 +76,23 @@
     background-color: var(--dark);
   }
 
+  .tegelBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .tegelBox article {
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--accentOne);
+    margin: 1rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .contactForm {
     display: flex;
     flex-direction: column;

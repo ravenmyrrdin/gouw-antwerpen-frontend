@@ -6,7 +6,7 @@ const Themas = () => {
     return (
         <Layout>
         <div>
-            <h1>Themas</h1>
+            <h1>Thema's</h1>
             <p>Test</p>
         </div>
         </Layout>
