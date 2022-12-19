@@ -11,15 +11,24 @@ const Homepage = ({data}) => {
   return (
     <Layout>
       <div>
-        <div>
-          <StaticImage className="homepageBgImage" src="../images/stad_antwerpen.jpg" alt="Stad Antwerpen Grote Markt" />
-        </div>
-        <div>
-          <h1>{homepageTitle}</h1>
-          <p>
-            {homepageDescription}
-          </p>
-        </div>
+        <div className="homepageBgImage">
+          </div>
+        <div className="overlay">
+          <div className="homepageLogoContainer">
+            <StaticImage className="homepageLogo" src="../images/wit_logo_gouw_antwerpen.png" alt="Logo gouw antwerpen"/>
+          </div>
+            <div className="overlayBody">
+              <div className="overlayBodyContent">
+                <h1>{homepageTitle}</h1>
+                <p>
+                  {homepageDescription}
+                </p>
+                <div className="overlayBodyContentIframe">
+                  <iframe src="https://www.google.com/maps/d/embed?mid=1lKEY2M88_awXv6TT9WkW1C47Vq_n_2w&ehbc=2E312F" width="400" height="300"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </Layout>)}
 
