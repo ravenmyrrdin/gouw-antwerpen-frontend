@@ -51,6 +51,7 @@
     .button:hover {
         background-color: var(--secundary);
         cursor: pointer;
+        box-shadow: 0 0 0.5rem var(--dark);
     }
  
   .navBar {
@@ -89,10 +90,23 @@
     background-color: var(--accentOne);
     margin: 1rem;
     padding: 2rem 1rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .tegelBox article:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 1rem var(--dark);
+  }
+
+  .functieTag {
+    text-align: center;
+    font-weight: bold;
+    margin: -2rem 0;
+  }
+
   .contactForm {
     display: flex;
     flex-direction: column;

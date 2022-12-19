@@ -48,15 +48,15 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h3>{naam}</h3>
-                                <p>
+                                
                                     {functies.reverse().map((functie) => {
-                                        if (functie.slug !== "buro") {
+                                        if (functie.slug !== "buro" && functie.slug.substring(0, 1) !== "a") {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                                
                                 <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
@@ -80,14 +80,14 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h4 className="h3">{naam}</h4>
-                                <p>{functies.reverse().map((functie) => {
+                                {functies.reverse().map((functie) => {
                                         if (functie.slug.includes("hollebeek")) {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                                
                                     <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
@@ -108,14 +108,14 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h4 className="h3">{naam}</h4>
-                                <p>{functies.reverse().map((functie) => {
+                                {functies.reverse().map((functie) => {
                                         if (functie.slug.includes("centrum")) {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                               
                                     <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
@@ -136,14 +136,14 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h4 className="h3">{naam}</h4>
-                                <p>{functies.reverse().map((functie) => {
+                                {functies.reverse().map((functie) => {
                                         if (functie.slug.includes("ter-schelde")) {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                                
                                     <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
@@ -164,14 +164,14 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h4 className="h3">{naam}</h4>
-                                <p>{functies.reverse().map((functie) => {
+                                {functies.reverse().map((functie) => {
                                         if (functie.slug.includes("west")) {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                                
                                     <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
@@ -192,14 +192,14 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h4 className="h3">{naam}</h4>
-                                <p>{functies.reverse().map((functie) => {
+                                {functies.reverse().map((functie) => {
                                         if (functie.slug.includes("zilverbeek")) {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                                
                                     <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
@@ -207,12 +207,12 @@ const WieIsWie = () => {
             </div>
             </section>
             <section>
-                <h2>de A-functies</h2>
+                <h2>De A-functies</h2>
                 <div class="tegelBox">
                     {edges.filter(({node})=> {
                         const slugArr = node.functies.nodes;
                         for (let i = 0; i < slugArr.length; i++) {
-                            if (slugArr[i].slug.substring(0, 1) === "a" && slugArr[i].slug.substring(0, 2) !== "ad") {
+                            if (slugArr[i].slug.substring(0, 1) === "a") {
                                 return true;
                             }
                         }
@@ -222,14 +222,14 @@ const WieIsWie = () => {
                         return (
                             <article>
                                 <h4 className="h3">{naam}</h4>
-                                <p>{functies.reverse().map((functie) => {
+                                {functies.reverse().map((functie) => {
                                         if (functie.slug.substring(0, 1) === "a" && functie.slug.substring(0, 2) !== "ad") {
                                             return (
-                                                <span>{functie.name}<br/></span>
+                                                <p className="functieTag">{functie.name}<br/></p>
                                             )
                                         }
                                     })}
-                                </p>
+                                
                                     <Link to={`/wie-is-wie/${node.slug}`} className="button" >Lees meer</Link>
                             </article>
                         )
