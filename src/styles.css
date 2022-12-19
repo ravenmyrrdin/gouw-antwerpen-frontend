@@ -51,7 +51,6 @@
     .button:hover {
         background-color: var(--secundary);
         cursor: pointer;
-        box-shadow: 0 0 0.5rem var(--dark);
     }
  
   .navBar {
@@ -73,10 +72,14 @@
     padding: 1rem;
   }
 
-  .navItem:hover, .navItem:active {
+  .navItem:hover, .navItem:active, .navSelected {
     background-color: var(--dark);
   }
 
+  .homepageBgImage {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
   .tegelBox{
     display: flex;
     flex-wrap: wrap;
@@ -87,18 +90,24 @@
   .tegelBox article {
     width: 20rem;
     height: 20rem;
-    background-color: var(--accentOne);
+    background-color: var(--light);
     margin: 1rem;
     padding: 2rem 1rem;
     border-radius: 2rem;
+    border: 2px solid var(--secundary);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .tegelBox article:hover{
-    transform: translateY(-5px);
     box-shadow: 0 0 1rem var(--dark);
+  }
+
+  .tegelImage {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
   }
 
   .functieTag {
@@ -106,6 +115,42 @@
     font-weight: bold;
     margin: -2rem 0;
   }
+
+  .profiel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 50%;
+    background-color: var(--light);
+    border-radius: 2rem;
+    border: 2px solid var(--secundary);
+  }
+
+  .profielFunctie {
+    display: block;
+    text-align: center;
+  }
+
+  .profielBeschrijving {
+    text-align: center;
+    padding: 1rem;
+  }
+
+    .profielImage {
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto;
+    }
+
+    .profielQuote {
+        text-align: center;
+        font-style: italic;
+        font-weight: bold;
+        padding: 1rem;
+    }
 
   .contactForm {
     display: flex;

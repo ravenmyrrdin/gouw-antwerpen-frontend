@@ -8,11 +8,11 @@ const Layout = ({ children }) => {
     <>
       <div>
         <nav className="navBar">
-          <Link className="navItem" to="/">Home</Link>
-          <Link className="navItem" to="/nieuws">Nieuws</Link>
-          <Link className="navItem" to="/wie-is-wie">Wie is wie</Link>
-          <Link className="navItem" to="/themas">Thema's</Link>
-          <Link className="navItem" to="/contact">Contact</Link>
+          <Link className="navItem" activeClassName="navSelected" to="/">Home</Link>
+          <Link className="navItem" activeClassName="navSelected" to="/nieuws">Nieuws</Link>
+          <Link className="navItem" activeClassName="navSelected" partiallyActive="navSelected" to="/wie-is-wie">Wie is wie</Link>
+          <Link className="navItem" activeClassName="navSelected" to="/themas">Thema's</Link>
+          <Link className="navItem" activeClassName="navSelected" to="/contact">Contact</Link>
         </nav>
         <main className="content">
           {children}
