@@ -13,6 +13,7 @@ const Contact = () => {
           name="contact"
           method="POST"
           data-netlify="true"
+          action="/succes"
         >
           <label for="name">Voornaam en Naam *</label>
           <input type="text" name="name" id="name" required={true} />
