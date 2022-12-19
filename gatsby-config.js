@@ -18,7 +18,7 @@ module.exports = {
          */
         url: "http://www.gouw.amt.events/graphql",
         schema: {
-          timeout: 120000, 
+          timeout: 60000, 
         },
       },
     },
