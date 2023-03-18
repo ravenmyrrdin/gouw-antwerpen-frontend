@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
             <Link className="navItem" activeClassName="navSelected" partiallyActive="navSelected" to="/wie-is-wie">Wie is wie</Link>
             <Link className="navItem" activeClassName="navSelected" partiallyActive="navSelected" to="/themas">Thema's</Link>
             <Link className="navItem" activeClassName="navSelected" to="/contact">Contact</Link>
+            <Link className="navItem" activeClassName="navSelected" to="/privacy">Privacy</Link>
           </div>
         </nav>
         <main className="content">

@@ -388,6 +388,16 @@
     margin: 0 auto;
   }
 
+  .privacyPagBox {
+    border: 2px solid var(--secundary);
+    border-radius: 2rem;
+    background-color: var(--light);
+    padding: 1rem;
+    width: 60%;
+    min-width: 300px;
+    margin: 2rem auto;
+  }
+
   @media screen and (max-width: 1050px) {
     .nieuwsArticle {
       display: grid;
